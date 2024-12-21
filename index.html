@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram Username</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .username {
+            font-size: 32px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="username" id="username"></div>
+
+    <script>
+        // Get the username from the URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('username') || 'Unknown User';  // Default to 'Unknown User'
+        document.getElementById('username').textContent = `Hello, ${username}`;
+    </script>
+</body>
+</html>
